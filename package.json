@@ -1,0 +1,34 @@
+{
+  "name": "tunegenie-spotify",
+  "version": "0.1.0",
+  "description": "Generate Spotify playlists from TuneGenie data",
+  "bin": {
+    "tunegenie-spotify": "./bin/tunegenie-spotify"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/colinodell/tunegenie-spotify"
+  },
+  "keywords": [
+    "spotify",
+    "tunegenie",
+    "music",
+    "playlist"
+  ],
+  "author": "Colin O'Dell <colinodell@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/colinodell/tunegenie-spotify/issues"
+  },
+  "dependencies": {
+    "request-promise": "~0.4",
+    "lodash": "~3.10",
+    "moment": "~2.10",
+    "bluebird": "~2.9",
+    "spotify-web-api-node": "~2.1",
+    "bottleneck": "~1.9"
+  }
+}

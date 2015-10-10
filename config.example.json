@@ -1,0 +1,24 @@
+{
+  "spotifyApi": {
+    "clientId": "CHANGEME",
+    "clientSecret": "CHANGEME",
+    "redirectUri": "http://CHANGEME.example.com/callback",
+    "accessToken": "CHANGEME",
+    "refreshToken": "CHANGEME"
+  },
+  "playlists": [
+    {
+      "name": "[WBRU] Top Hits",
+      "public": false,
+      "brand": "wbru",
+      "type": "topHits"
+    },
+    {
+      "name": "[WBRU] Recently Played",
+      "public": false,
+      "brand": "wbru",
+      "type": "onAir",
+      "hours": 48
+    }
+  ]
+}
