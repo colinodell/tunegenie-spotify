@@ -34,7 +34,7 @@ spotify.ensureAuthenticated()
 
     songs = switch playlist.type
       when 'topHits' then tunegenie.getTopHits()
-      when 'onAir' then tunegenie.getOnAir(playlist.hours)
+      when 'onAir' then tunegenie.getOnAir(playlist.day, playlist.hours)
       else throw "Invalid playlist type: '#{playlist.type}'"
 
     songs.then (songs) ->

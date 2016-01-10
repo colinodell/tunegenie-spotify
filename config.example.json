@@ -18,7 +18,8 @@
       "public": false,
       "brand": "wbru",
       "type": "onAir",
-      "hours": 48
+      "day": "Friday",
+      "hours": 114
     }
   ]
 }

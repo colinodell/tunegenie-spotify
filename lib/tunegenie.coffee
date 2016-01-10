@@ -10,9 +10,9 @@ class TuneGenie
   getTopHits: () ->
     doRequest "http://#{@brand}.tunegenie.com/api/v1/brand/tophits/", "http://#{@brand}.tunegenie.com/tophits/"
 
-  getOnAir: (hours, minimumPlays = 1) ->
-    now = moment()
-    periods = getHourlyPeriods now, hours
+  getOnAir: (day, hours, minimumPlays = 1) ->
+    day = moment().day(day).subtract(1, 'week').endOf('day');
+    periods = getHourlyPeriods day, hours
 
     requests = _.map periods, getHourlySongs, this
 

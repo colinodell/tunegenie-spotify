@@ -38,7 +38,10 @@ You can configure any number of playlists. Each one requires the following field
 
 If the `type` is `onAir`, you'll also want to provide:
 
+- `day` - Name of the last day to pull data for.
 - `hours` - Determines how far back in time (in hours) to look.  More hours = more songs.
+
+For example, if you want all songs played on a Friday, set `day` to `Friday` and `hours` to `24`.
 
 Upon creating the playlist, this tool will also add an additional configuration item:
 
