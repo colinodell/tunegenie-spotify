@@ -3,8 +3,8 @@
     "clientId": "CHANGEME",
     "clientSecret": "CHANGEME",
     "redirectUri": "http://CHANGEME.example.com/callback",
-    "accessToken": "CHANGEME",
-    "refreshToken": "CHANGEME"
+    "accessToken": false,
+    "refreshToken": false
   },
   "playlists": [
     {
