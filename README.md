@@ -47,6 +47,10 @@ Upon creating the playlist, this tool will also add an additional configuration 
 
 - `playlistId` - The Spotify ID of the playlist; used to update the existing playlist on subsequent runs
 
+### Songs
+
+The config file allows you to configure how certain songs should be handled. For example, if TuneGenie always mispells a certain track (causing it to not be found by Spotify), you can provide the correct spelling. Or perhaps you never want a certain song to be included - you can blacklist it from being added to your playlists.  See the sample config file for examples of this.
+
 ## Usage
 
 Honestly, I've just been running `app.coffee` from my IDE.  There's a script in `bin` which may (or may not) work - I haven't actually tested it.

@@ -21,5 +21,9 @@
       "day": "Friday",
       "hours": 114
     }
-  ]
+  ],
+  "songs": {
+    "Artist Name - Song Name With A Tpyo": "Artist Name - Song Name With A Tpyo",
+    "Artist Name - Some Song You Never Want Included": false
+  }
 }

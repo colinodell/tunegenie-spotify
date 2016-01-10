@@ -40,6 +40,14 @@ spotify.ensureAuthenticated()
     songs.then (songs) ->
       console.log "Identified #{songs.length} potential tracks for #{playlist.name}"
 
+      songs = _.map songs, (song) ->
+        switch typeof config.songs[song]
+          when "string" then config.songs[song]
+          when "boolean" then false
+          else song
+
+      songs = _.reject songs, (song) -> song == false || song == ""
+
       tracks =_.map songs, (song) ->
         limiter.schedule spotify.searchForTrack, song
 
