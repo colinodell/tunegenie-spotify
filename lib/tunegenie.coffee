@@ -34,7 +34,9 @@ class TuneGenie
     # Make a list of times by subtracting one hour and returning that date and time
     num = hours + 1
     while num -= 1
-      startDate.subtract(1, 'hours').clone()
+      ret = startDate.subtract(1, 'hours').clone()
+      if ret.hour() >= 2
+        ret
 
   getHourlySongs = (start) ->
     start = moment(start).minute(0).second(0).millisecond(0)
