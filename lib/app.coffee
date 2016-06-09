@@ -56,6 +56,7 @@ spotify.ensureAuthenticated()
       tracks = _.chain(tracks).filter().pluck('uri').value()
       spotify.createOrGetPlaylistId playlist
       .then (playlistId) ->
+        playlist.playlistId = playlistId
         saveConfig()
 
         spotify.setTracks playlistId, tracks
