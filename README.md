@@ -1,6 +1,6 @@
 # tunegenie-spotify
 
-A small side-project to automatically create/update Spotify playlists with songs played by [my favorite radio station](http://www.wbru.com) (as recorded by TuneGenie).
+A small side-project to automatically create/update [Spotify playlists](https://open.spotify.com/user/1222035844/playlist/3b1Kuj50FeR3dTanlAYg4E) with songs played by [my favorite radio station](http://www.wbru.com) (as recorded by TuneGenie).
 
 It currently supports two modes of operation:
 
