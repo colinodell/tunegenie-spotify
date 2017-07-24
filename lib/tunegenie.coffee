@@ -11,7 +11,7 @@ class TuneGenie
     doRequest "http://#{@brand}.tunegenie.com/api/v1/brand/tophits/", "http://#{@brand}.tunegenie.com/tophits/"
 
   getOnAir: (day, hours, minimumPlays = 1) ->
-    day = moment().day(day).subtract(1, 'week').endOf('day');
+    day = moment().utcOffset(-4).day(day).subtract(1, 'week').endOf('day');
     periods = getHourlyPeriods day, hours
 
     requests = _.map periods, getHourlySongs, this
@@ -43,7 +43,7 @@ class TuneGenie
     end = start.clone().minute(59).second(59)
 
     url = "http://#{@brand}.tunegenie.com/api/v1/brand/nowplaying/?hour=#{start.hour()}&since=#{start.format()}&until=#{end.format()}"
-    doRequest url, "http://#{@brand}.tunegenie.com/onair/"
+    doRequest url, "http://#{@brand}.tunegenie.com/"
 
   doRequest = (url, referer) ->
     options =
@@ -56,5 +56,7 @@ class TuneGenie
       data = JSON.parse data
       songs = data.response
       _.map songs, (item) -> "#{item.artist} - #{item.song}"
+    .catch (err) ->
+      console.log "Request failed for #{url}"
 
 module.exports = TuneGenie
